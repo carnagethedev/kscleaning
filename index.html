@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KS Cleaning</title>
+    <title>KS Property Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/icon.png" type="image/png">
@@ -17,7 +17,8 @@
             <div class="logo">
                 <img src="images/icon.png" alt="Company Logo" class="logo-image">
             </div>
-            <a href="#contact" class="btn-inquire">INQUIRE NOW</a>
+            <a href="#" class="btn-inquire" onclick="openPopup()">INQUIRE NOW</a>
+
         </div>
         <div class="hero-section">
             <img src="images/service1.jpg" alt="Cleaning in action" class="hero-image">
@@ -43,7 +44,7 @@
         <div class="service-content">
             <h2>Commercial Cleaning</h2>
             <p>Commercial Cleaning Description</p>
-            <a href="#contact" class="btn-inquire">INQUIRE NOW</a>
+            <a href="#" class=" btn-inquire inquire-button" onclick="openPopup()">INQUIRE NOW</a>
         </div>
     </div>
 </section>
@@ -57,7 +58,7 @@
         <div class="service-content black-text">
             <h2>House Cleaning</h2>
             <p>House Cleaning Description</p>
-            <a href="#contact" class="btn-inquire black-btn">INQUIRE NOW</a>
+            <a href="#" class=" btn-inquire inquire-button black-btn" onclick="openPopup()">INQUIRE NOW</a>
         </div>
     </div>
 </section>
@@ -71,7 +72,7 @@
         <div class="service-content white-text">
             <h2>General Cleaning</h2>
             <p>General Cleaning Description</p>
-            <a href="#contact" class="btn-inquire white-btn">INQUIRE NOW</a>
+            <a href="#" class=" btn-inquire inquire-button white-btn" onclick="openPopup()">INQUIRE NOW</a>
         </div>
     </div>
 </section>
@@ -115,6 +116,39 @@
     </div>
 </section>
 
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="left-section">
+            <h1 class="company-name">KS Cleaning</h1>
+        </div>
+        <div class="right-section">
+            <div class="contact-info">
+                <h2 class="contact-heading">Office Address</h2>
+                <p class="contact-details">Melbourne, Australia</p>
+            </div>
+            <div class="contact-info">
+                <h2 class="contact-heading">Phone Number</h2>
+                <p class="contact-details">0448-516-649</p>
+            </div>
+            <div class="contact-info">
+                <h2 class="contact-heading">Email</h2>
+                <p class="contact-details">kscleaning.co@hotmail.com</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div id="inquiryPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+      <h3>Choose your preferred method:</h3>
+      <a href="mailto:kscleaning.co@hotmail.com" class="btn-inquire">Email Us</a>
+      <a href="tel:0448-516-649" class="btn-inquire">Call Us</a>
+      <a href="sms:0448-516-649" class="btn-inquire">Text Us</a>
+    </div>
+  </div>
+  
 
 
 <script src="script.js"></script>

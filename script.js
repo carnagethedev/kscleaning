@@ -35,5 +35,21 @@ window.addEventListener("load", function() {
     document.addEventListener("DOMContentLoaded", function () {
         const thanksText = document.querySelector('.thanks-content h1');
         thanksText.classList.add('loaded'); // Trigger the fade-in effect when the page is loaded
-    });
+    })
+   
+    // Open the popup
+function openPopup() {
+    document.getElementById("inquiryPopup").style.display = "block";
+}
+function closePopup() {
+    document.getElementById("inquiryPopup").style.display = "none";
+}
+
+// Close the popup when user clicks outside of it
+window.onclick = function(event) {
+    var popup = document.getElementById("inquiryPopup");
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
 
