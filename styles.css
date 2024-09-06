@@ -344,8 +344,8 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
+    background-color: transparent;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -366,7 +366,7 @@ body {
   }
   
   .carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color: red;
   }
   
   .carousel-control span {
