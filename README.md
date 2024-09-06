@@ -1,7 +1,8 @@
-**KS Cleaning** [icon](https://github.com/user-attachments/assets/9bf745e5-8c54-43a1-9228-e2c1bf2ac417)
+**KS Cleaning**
+
 
 
 The Website for my Cleaning Company!
-
+![icon](https://github.com/user-attachments/assets/6c218410-619f-40ae-bcaf-38f50632f8b8)
 
 
