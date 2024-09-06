@@ -255,75 +255,141 @@ body {
     color: #fff;
 }
 
-/* White background section */
-.other-services {
-    background-color: #fff;
-    padding: 80px 20px;
+/* Overall Section Styling */
+
+/* Style for "Other Services" Heading */
+.other-services-heading {
     text-align: center;
-}
-
-.other-services .section-title {
-    margin-bottom: 40px;
-    font-size: 28px;
-    color: #000;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(30px); /* Shift downward */
-    animation: fadeUp 1s ease-out forwards; /* Fade and move up */
-}
-
-.service-grid {
-    display:flex;
-    justify-content: space-between;
-    gap: 70px;
-}
-
-.service-item {
-    position:relative;
-    width: 100%;
-    overflow: hidden;
-    opacity: 0; /* Initially invisible */
-    transform: scale(0.95); /* Slightly smaller */
-    animation: fadeIn 1s ease-out forwards; /* Fade in and scale up */
-}
-
-.service-item img {
-    width: 100%;
-    height: 100%;
+    background-color: transparent; /* White background as requested */
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  
+  .other-services-heading h2 {
+    font-size: 1.5rem; /* Adjust the font size to your preference */
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    color: black; /* Black text color */
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif; /* Use the same font as the other heading */
+  }
+  
+  /* To match the padding and spacing */
+  .other-services-heading h2::before {
+    content: " ";
     display: block;
-    transition: transform 0.3s ease-out;
-}
+    margin: 0 auto;
+    width: 100px;
+    height: 4px;
+    background-color: transparent; /* Thin black underline */
+    margin-bottom: 10px;
+  }
+  
 
-.service-item:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.service-info {
+.other-services-section {
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Light background for clean look */
+  }
+  
+  /* Carousel Container */
+  .service-carousel {
+    overflow: hidden; /* Hide overflowing content */
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* Carousel Items */
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth animation */
+  }
+  
+  .service-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Hover effect on items */
+  }
+  
+  .service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .service-info {
+    background: rgba(255, 255, 255, 0.9); /* Clean background for text */
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* White box with slight transparency */
     padding: 15px;
-    text-align: left;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 0.8s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-.service-info h4 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-}
-
-.service-info p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: #555;
-}
-
+    text-align: center;
+    border-radius: 12px;
+    backdrop-filter: blur(5px); /* Soft blur for background */
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Carousel Control Arrows */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  .carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .carousel-control span {
+    font-size: 24px;
+    pointer-events: none;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 768px) {
+    .service-item {
+      padding: 10px;
+    }
+  
+    .service-info {
+      font-size: 0.9em;
+    }
+  
+    .carousel-control {
+      font-size: 20px;
+      padding: 8px 16px;
+    }
+  }
+  
 /* Animation Keyframes */
 
 /* Fade in for the title and service items */
@@ -635,33 +701,6 @@ body {
 
     .other-services img {
         width: 100%; /* Make images responsive */
-    }
-}
-/* Thanks For Visiting Section */
-.thanks-section {
-    background: url('path_to_your_logo_image.jpg') no-repeat center center;
-    background-size: cover; /* Make sure the image covers the section */
-    text-align: center;
-    color: white;
-    padding: 100px 20px;
-    position: relative;
-    min-height: 300px; /* Adjust based on content */
-}
-
-.thanks-section h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-/* Mobile adjustments for background image */
-@media screen and (max-width: 768px) {
-    .thanks-section {
-        padding: 50px 10px; /* Reduce padding for smaller screens */
-        background-position: center;
-    }
-
-    .thanks-section h1 {
-        font-size: 2em; /* Slightly smaller font for mobile */
     }
 }
 

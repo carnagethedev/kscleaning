@@ -53,3 +53,54 @@ window.onclick = function(event) {
     }
 }
 
+
+const carouselWrapper = document.querySelector('.carousel-wrapper');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const width = document.querySelector('.service-item').offsetWidth;
+  carouselWrapper.style.transform = `translateX(${-width * currentIndex}px)`;
+}
+
+nextButton.addEventListener('click', () => {
+  const totalItems = document.querySelectorAll('.service-item').length;
+  if (currentIndex < totalItems - 1) {
+    currentIndex++;
+    updateCarousel();
+  } else {
+    currentIndex = 0; // Loop back to the start
+    updateCarousel();
+  }
+});
+
+prevButton.addEventListener('click', () => {
+  const totalItems = document.querySelectorAll('.service-item').length;
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  } else {
+    currentIndex = totalItems - 1; // Loop back to the last item
+    updateCarousel();
+  }
+});
+
+/* Add touch swipe support for mobile */
+let startX;
+carouselWrapper.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carouselWrapper.addEventListener('touchmove', (e) => {
+  const touch = e.touches[0];
+  const deltaX = touch.clientX - startX;
+
+  if (deltaX > 50) {
+    prevButton.click();
+  } else if (deltaX < -50) {
+    nextButton.click();
+  }
+});
+
